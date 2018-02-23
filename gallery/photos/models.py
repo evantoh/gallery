@@ -24,6 +24,9 @@ class Image(models.Model):
     Image_date=models.DateTimeField(auto_now_add=True,null=True)
 
 
-    
-    
+    def __str__(self):
+        return self.Image_Description
+    # method to make save test pass
+    def save_image(self):
+        self.save()
 
