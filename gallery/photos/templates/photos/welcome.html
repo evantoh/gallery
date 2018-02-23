@@ -1,15 +1,15 @@
 {%extends 'photos/base.html'%}
 {% block content %}
-<h1 class="text-center"> welcome to my pics</h1>
 {% for image in images %}
 
 
 <div class="card" style="width: 18rem;">
+    <p class="card-text">{{image.Image_Description}}</p>
         <div class="card-body">
                 <img src="{{image.Image.url}}" class="rounded"  height="50%" width="50%" alt="Image">
           <h5 class="card-title">{{image.Name}}</h5>
-          <p class="card-text">{{image.Image_Description}}</p>
-          <a href="#" class="btn btn-primary">more details{{image.Image_Location}}</a>
+         
+          <a href="#" class="btn btn-primary">more details</a>
         </div>
       </div>
 </div>

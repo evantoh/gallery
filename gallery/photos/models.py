@@ -16,7 +16,7 @@ class Category(models.Model):
 
 # Create model image.
 class Image(models.Model):
-    Image_Description = models.CharField(max_length=30,null=True)
+    Image_Description = models.TextField(null=True)
     Image_Name = models.CharField(max_length=30)
     Image = models.ImageField(upload_to = 'images/',null=True)
     Image_Location=models.ForeignKey(Location,null=True)
@@ -32,4 +32,9 @@ class Image(models.Model):
 
     def delete_image(self):
         self.delete()
+
+    @classmethod
+    def search_by_title(cls, search_term):
+        gallery = cls.objects.filter(Image_Description__icontains=search_term)
+        return gallery
 
