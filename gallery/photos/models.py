@@ -18,7 +18,7 @@ class Category(models.Model):
 class Image(models.Model):
     Image_Description = models.CharField(max_length=30,null=True)
     Image_Name = models.CharField(max_length=30)
-    # Image = models.CharField(max_length=30)
+    Image = models.ImageField(upload_to = 'images/')
     Image_Location=models.ForeignKey(Location,null=True)
     Image_Category=models.ManyToManyField(Category,blank=True)
     Image_date=models.DateTimeField(auto_now_add=True,null=True)
