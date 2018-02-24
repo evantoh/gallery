@@ -1,6 +1,7 @@
 
 from django .shortcuts import render
 from .models import Image 
+from django.http import HttpResponse,Http404
 
 
 # Create your views here.
@@ -21,3 +22,7 @@ def search_results(request):
     else:
         message = "You haven't searched for any photos"
         return render(request, 'photos/search.html', {"message":message})
+# a function that get data from db of a specific id
+def single_photo(request,image_id):
+    photo=Image.objects.get(id=image_id)
+    return render(request,"photos/single_photo.html",{"photo":photo})
