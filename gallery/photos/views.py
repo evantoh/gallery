@@ -1,6 +1,6 @@
 
 from django .shortcuts import render
-from .models import Image,Location,Category 
+from .models import Image 
 
 
 # Create your views here.
@@ -11,11 +11,13 @@ def welcome(request):
     return render(request,'photos/welcome.html',{ "images":images})
 
 def search_results(request):
-    if 'Image' in request.GET and request.GET['Image']:
-        search_term = request.GET.get('Image')
-        searched_photo = Photos.search_by_title(search_term)
+    
+    if 'photos' in request.GET and request.GET["photos"]:
+        search_term = request.GET.get("photos")
+        searched_photos = Image.search_by_category(search_term)
         message = f"{search_term}"
-        return render(request, 'search.html', {"message":message, "Image":searched_photo})
+        return render(request, 'photos/search.html', {"message":message,"photos":searched_photos})
+
     else:
-        message = 'You haven\'t searched for any photos.'
-        return render(request, 'search.html', {"message":message})
+        message = "You haven't searched for any photos"
+        return render(request, 'photos/search.html', {"message":message})

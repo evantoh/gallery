@@ -33,8 +33,10 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
+        
+# define method that will query the db and fetch results
     @classmethod
-    def search_by_title(cls, search_term):
+    def search_by_category(cls,search_term):
         gallery = cls.objects.filter(Image_Description__icontains=search_term)
         return gallery
 
