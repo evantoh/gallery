@@ -1,0 +1,17 @@
+.image_search{
+    margin-top: 31px;
+    padding: 7px;
+}
+.content{
+    float: right;
+    margin-right: 10px;
+    margin-left: 70%;
+}
+.image-name,.image-description,.image-category,.image-date{
+    font-family: fantasy;
+    font-size: 30px;
+}
+/* .image-description{
+    font-family: fantasy;
+    font-size: 30px;
+} */
