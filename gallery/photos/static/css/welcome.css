@@ -1,0 +1,12 @@
+.style-image
+{
+    overflow: hidden;
+      margin: 5px;
+      font-family: serif;
+}
+.container-image 
+{
+    float: left;
+    margin-left: 3%;
+    padding-bottom: 2%;
+}

@@ -37,6 +37,6 @@ class Image(models.Model):
 # define method that will query the db and fetch results
     @classmethod
     def search_by_category(cls,search_term):
-        gallery = cls.objects.filter(Image_Description__icontains=search_term)
+        gallery = cls.objects.filter(Image_Name__icontains=search_term)
         return gallery
 
