@@ -5,9 +5,9 @@
       {% for image in images %}
     <a href="{% url 'single_photo' image.id %}">
     <div class="container-image">
-      <div class="boxInner">
-          <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{image.Image_Name|upper}}</div>
-        <img src="{{image.Image.url}}"  class="img-responsive" class="rounded">
+      <div class="style-inner-image">
+          <div>{{image.Image_Name|upper}}</div>
+        <img src="{{image.Image.url}}"  class="rounded">
         
       </div>
     </div>

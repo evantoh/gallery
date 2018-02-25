@@ -1,12 +1,27 @@
 .style-image
 {
     overflow: hidden;
-      margin: 5px;
-      font-family: serif;
+    margin: 11px;
+    font-family: serif;
+    /* vertical-align: middle; */
+    border-style: ridge;
+    border-radius: 44px;
+    margin-left: 58px;
+    padding-top: 1em;
 }
 .container-image 
 {
     float: left;
-    margin-left: 3%;
+    margin-left: auto;
     padding-bottom: 2%;
+    border-style: ridge;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+.style-inner-image
+{
+width: 100%;
+height: 100%;
+border-radius: 25px;
 }
