@@ -2,20 +2,16 @@
 <section class="no-touch">
 
   <div class="style-image">
-      {% for image in images %}
+    {% for image in images %}
     <a href="{% url 'single_photo' image.id %}">
     <div class="container-image">
       <div class="style-inner-image">
           <div>{{image.Image_Name|upper}}</div>
-        <img src="{{image.Image.url}}"  class="rounded">
-        
+        <img src="{{image.Image.url}}"  class="rounded"> 
       </div>
     </div>
     </a>
     {% endfor %}
-
   </div>
-
 </section>
-
 {% endblock %}
