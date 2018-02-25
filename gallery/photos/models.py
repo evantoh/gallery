@@ -20,7 +20,7 @@ class Image(models.Model):
     Image_Name = models.CharField(max_length=30)
     Image = models.ImageField(upload_to = 'images/',null=True)
     Image_Location=models.ForeignKey(Location,null=True)
-    Image_Category=models.ManyToManyField(Category,blank=True)
+    Image_Category=models.ForeignKey(Category,blank=True,null=True)
     Image_date=models.DateTimeField(auto_now_add=True,null=True)
 
 

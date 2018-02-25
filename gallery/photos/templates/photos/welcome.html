@@ -1,17 +1,21 @@
-{%extends 'photos/base.html'%}
-{% block content %}
-{% for image in images %}
+{% extends 'photos/base.html' %} {% block content %}
+<section class="no-touch">
 
-
-<div class="card" style="width: 18rem;">
-    <p class="card-text">{{image.Image_Description}}</p>
-        <div class="card-body">
-                <img src="{{image.Image.url}}" class="rounded"  height="50%" width="50%" alt="Image">
-          <h5 class="card-title">{{image.Name}}</h5>
-         
-          <a href="#" class="btn btn-primary">more details</a>
-        </div>
+  <div class="wrap">
+      {% for image in images %}
+    <a href="{% url 'single_photo' image.id %}">
+    <div class="box">
+      <div class="boxInner">
+          <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{image.Image_Name|upper}}</div>
+        <img src="{{image.Image.url}}"  class="img-responsive">
+        
       </div>
-</div>
-{% endfor %}
+    </div>
+    </a>
+    {% endfor %}
+
+  </div>
+
+</section>
+
 {% endblock %}

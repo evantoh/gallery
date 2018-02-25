@@ -1,4 +1,3 @@
-
 from django .shortcuts import render
 from .models import Image 
 from django.http import HttpResponse,Http404
@@ -11,6 +10,7 @@ def welcome(request):
     #pass the objects to view
     return render(request,'photos/welcome.html',{ "images":images})
 
+# funtion to search the request passed in the form.
 def search_results(request):
     
     if 'photos' in request.GET and request.GET["photos"]:
@@ -22,7 +22,8 @@ def search_results(request):
     else:
         message = "You haven't searched for any photos"
         return render(request, 'photos/search.html', {"message":message})
-# a function that get data from db of a specific id
+        
+# a function that get data from db of a specific image
 def single_photo(request,image_id):
     photo=Image.objects.get(id=image_id)
     return render(request,"photos/single_photo.html",{"photo":photo})
