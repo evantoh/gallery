@@ -7,7 +7,23 @@
    <div class="row">
      <img src="{{photo.Image.url}}"  class="img-responsive" alt="">
    </div>
-
+   <div class="row">
+      <p>Name:{{photo.Image_Name}}</p>
+      <div class="row">
+          <p>Description:{{photo.Image_Description}}</p>
+      </div>
+      <div class="row">
+          <p>Location:{{photo.Image_Location}}</p>
+      </div>
+      <div class="row">
+          <p>category:{{photo.Image_Category}}</p>
+      </div>
+      <div class="row">
+          <p>Date posted:{{photo.Image_date}}</p>
+      </div>
+      
+    </div>
  </div>
 
  {% endblock %}
+   
