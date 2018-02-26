@@ -1,4 +1,4 @@
-+![](/home/evans/Pictures/best.png)
+![gallery](gallery.png)
 # GALLERY
 #### By **evans mwenda**
 ## Description
