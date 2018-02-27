@@ -8,11 +8,22 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+    
+     #method to make test pass
+    def save_location(self):
+        self.save()
+
+
 class Category(models.Model):
     name=models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
+
+    #method to make test pass
+    def save_category(self):
+        self.save()
+
 
 # Create model image.
 class Image(models.Model):
