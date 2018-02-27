@@ -1,6 +1,15 @@
 .image_search img{
     margin-top: 31px;
     padding: 14px;
-    height: 50%;
-    width: 70%;
+    height: 129%;
+    width: 141%;
+    border-radius: 65px;
+}
+.content{
+    color:blue;
+    font-size: 15px;
+    margin-left: 49%;
+    padding-top: -55%;
+    margin-top: -267px;
+
 }
