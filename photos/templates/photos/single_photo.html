@@ -5,23 +5,21 @@
   <div class="right-content">
     <div class="content-arrow"></div>
     <div class="content-container">
-      <h2 style="font-family: 'Cabin Sketch', cursive;">{{photo.Image_Name|upper}}</h2>
+      <h2>{{photo.Image_Name|upper}}</h2>
       <div class="bot-view">
-        <div class="date" style="color:white; font-family: 'Concert One', cursive;">
-          {{photo.Image_date}} / &nbsp<span class="under">{{photo.Image_Location}}</span>
+        <div class="date" style="color: #eee;">
+          {{photo.Image_date}} {{photo.Image_Location}}</span>
         </div>
-        <hr class="line" />
-        <div class="info" style="font-family: 'Arima Madurai', cursive; color:white">
+        <div class="info" style="color: #eee;">
           <div>
-            <span>{{photo.Image_Description}}</span>
+            <span style="color: #eee;">{{photo.Image_Description}}</span>
+            <div class="footer">
+              <div id="buttons">
+                <a href="#" class="btn btn-default btn-block" style="color:blueviolet">Copy Image link <i class="glyphicon glyphicon-paperclip"></i>
+              </a></div>
+            </div>
           </div>
-          <hr class="line" />
-          <div class="footer">
-            <div id="buttons">
-              <a href="#" class="btn btn-default btn-block">Copy Image link  &nbsp<i class="glyphicon glyphicon-paperclip"></i>
-  </a></div>
-            <p>{{photo.Image_Category}}</p>
-          </div>
+
         </div>
       </div>
     </div>
