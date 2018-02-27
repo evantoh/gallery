@@ -1,31 +1,30 @@
+{% extends 'photos/base.html' %} {% block content %}
 
- {% extends 'photos/base.html' %} {% block content %}
+<div class="body">
+  <div class="left-img2"><img src="{{photo.Image.url}}" alt="" /></div>
+  <div class="right-content">
+    <div class="content-arrow"></div>
+    <div class="content-container">
+      <h2 style="font-family: 'Cabin Sketch', cursive;">{{photo.Image_Name|upper}}</h2>
+      <div class="bot-view">
+        <div class="date" style="color:white; font-family: 'Concert One', cursive;">
+          {{photo.Image_date}} / &nbsp<span class="under">{{photo.Image_Location}}</span>
+        </div>
+        <hr class="line" />
+        <div class="info" style="font-family: 'Arima Madurai', cursive; color:white">
+          <div>
+            <span>{{photo.Image_Description}}</span>
+          </div>
+          <hr class="line" />
+          <div class="footer">
+            <div id="buttons">
+              <a href="#" class="btn btn-default btn-block">Copy Image link  &nbsp<i class="glyphicon glyphicon-paperclip"></i>
+  </a></div>
+            <p>{{photo.Image_Category}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
- <div class="body">
-   <div class="left-img2"><img src="{{photo.Image.url}}" alt="" /></div>
-   <div class="right-content">
-     <div class="content-arrow"></div>
-     <div class="content-container">
-       <h2 style="font-family: 'Cabin Sketch', cursive;">{{photo.Image_Name|upper}}</h2>
-       <div class="bot-view">
-         <div class="date" style="color:white; font-family: 'Concert One', cursive;">
-           {{photo.Image_date}} / &nbsp<span class="under">{{photo.Image_Location}}</span>
-         </div>
-         <hr class="line" />
-         <div class="info" style="font-family: 'Arima Madurai', cursive; color:white">
-           <div>
-             <span>{{photo.Image_Description}}</span>
-           </div>
-           <hr class="line" />
-           <div class="footer">
-             <div id="buttons">
-               <a href="#" class="btn btn-default btn-block">Copy Image link  &nbsp<i class="glyphicon glyphicon-paperclip"></i>
-   </a></div>
-             <p>{{photo.Image_Category}}</p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- 
-   {% endblock %}  
+  {% endblock %} 

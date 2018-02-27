@@ -15,21 +15,21 @@
   {% if photos %}
     {% for photo in photos %} 
       <div class="image_search">
-          <div class="left-img2"><img src="{{photo.Image.url}}" alt="" />
+          <img src="{{photo.Image.url}}" alt="" />
           </div>
     </div>
-    <div class="content">
-        <div class="image-name">
+    <div class="content" style="color:blue;font-size: 15px">
+        <div >
             <p>image name:{{photo.Image_Name}}</p>
         </div>
-        <div class="image-description">
+        <div >
             <p>image description:{{photo.Image_Description}}</p>
         </div>
-        <div class="image-category">
+        <div >
             <p>image category:{{photo.Image_Category}}</p>
         </div>
-        <div class="image-date">
-            <p>image date po{{photo.Image_date}}</p>
+        <div >
+            <p>image date posted:{{photo.Image_date}}</p>
         </div>
     </div>
     
